@@ -3,9 +3,6 @@
 # Obtener todos los autores:
 GET /api/autores
 
-# Obtener un autor mediante su id:
-GET /api/autores/:IDAUTOR
-
 # Crear un autor:
 POST /api/autores/create 
 
