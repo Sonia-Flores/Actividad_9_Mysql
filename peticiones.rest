@@ -1,5 +1,34 @@
+### AUTORES ###
+###############
+
 ###
 GET http://localhost:3000/api/autores
 ###
 POST http://localhost:3000/api/autores
+Content-Type:application/json
+
+{
+    "Nombre": "Autor Prueba",
+    "Email": "autor@gmail.com",
+    "Imagen": "imagen_autor.png"
+}
+
 ###
+
+### POSTS ###
+###############
+
+GET http://localhost:3000/api/posts
+###
+GET http://localhost:3000/api/posts/1
+###
+POST http://localhost:3000/api/posts
+Content-Type:application/json
+
+{
+    "Titulo": "Titulo_prueba",
+    "Descripcion": "Descripción_prueba",
+    "FechaCreacion": "2023-11-30",
+    "Categoria": "Comedia",
+    "IdAutor": 1
+}

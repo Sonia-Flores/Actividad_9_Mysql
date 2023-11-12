@@ -4,7 +4,7 @@
 GET /api/autores
 
 # Crear un autor:
-POST /api/autores/create 
+POST /api/autores
 
 
 ### RUTAS POSTS ##
@@ -19,4 +19,4 @@ GET /api/post/:IDPOST
 GET /api/posts/:IDAUTOR 
 
 # Crear un post:
-POST /api/posts/create 
+POST /api/posts

@@ -1,7 +1,14 @@
-# Actividad_9_Mysql
+# API MYSQL
  En esta actividad vamos a repasar los conceptos básicos de la creación de aplicaciones complejas con ExpressJS, así como los diferentes métodos de interacción sobre bases de datos relacionales con MySQL. 
 
+# Pasos para arrancar la app
+- Para instalar las librerías necesarias:
+    $npm install
+- Arranque la aplicación:
+    $npm start
 # INFO
+
+- Dentro del proyecto encontrarás un fichero con extensión .sql con la estructura de la BBDD.
 
 - En rutas.md se encuentra información sobre las tutas que gestiona la API.
 

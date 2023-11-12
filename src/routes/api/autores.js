@@ -1,12 +1,9 @@
 const router = require('express').Router();
+const AutoresController = require('../../controllers/autores.controller');
 
-router.get('/', (req, res) => {
-    res.send('Todos los autores');
-});
+router.get('/', AutoresController.getAllAutores);
 
-router.post('/', (req, res) => {
-    res.send('Creando un autor');
-});
+router.post('/', AutoresController.insertAutor);
 
 
 
