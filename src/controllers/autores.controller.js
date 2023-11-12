@@ -3,7 +3,6 @@ const AutorModel = require('../models/autor.model');
 const getAllAutores = async (req, res) => {
     try{
         const [result] = await AutorModel.selectAllAutores()
-        console.log(result);
 
         res.json(result);
 
@@ -17,8 +16,7 @@ const insertAutor = async (req, res) => {
         const [result] = await AutorModel.insertAutor(req.body)
         const [autor] = await AutorModel.selectAutorById(result.insertId)
 
-        console.log(autor)
-        res.json(autor);
+        res.json(autor[0]);
 
     } catch(error){
         res.json({error: error.message});

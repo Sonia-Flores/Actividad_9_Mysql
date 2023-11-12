@@ -20,7 +20,7 @@ Content-Type:application/json
 
 GET http://localhost:3000/api/posts
 ###
-GET http://localhost:3000/api/posts/1
+GET http://localhost:3000/api/posts/5
 ###
 POST http://localhost:3000/api/posts
 Content-Type:application/json
@@ -30,5 +30,5 @@ Content-Type:application/json
     "Descripcion": "Descripción_prueba",
     "FechaCreacion": "2023-11-30",
     "Categoria": "Comedia",
-    "IdAutor": 1
+    "IdAutor": 9
 }
