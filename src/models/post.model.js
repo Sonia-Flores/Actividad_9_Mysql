@@ -4,7 +4,7 @@ const selectAllPosts = () => {
 const selectPostById = (postId) => {
     return db.query('SELECT p.*, a.Nombre AS NombreAutor, a.Email AS EmailAutor, a.Imagen AS ImagenAutor FROM Posts AS p INNER JOIN Autores AS a ON p.idAutor = a.id WHERE p.id = ?', [postId])
 }
-const selectPostsByAutorId = (autorId) => {
+const selectPostsByAutor = (autorId) => {
     return db.query('SELECT p.*, a.Nombre AS NombreAutor, a.Email AS EmailAutor, a.Imagen AS ImagenAutor FROM Posts AS p INNER JOIN Autores AS a ON p.idAutor = a.id WHERE a.id = ?', [autorId])
 }
 
@@ -19,7 +19,7 @@ const insertPost = ({Titulo, Descripcion, FechaCreacion, Categoria, IdAutor}) =>
 module.exports = {
     selectAllPosts,
     selectPostById,
-    selectPostsByAutorId,
+    selectPostsByAutor,
     insertPost
     
 }

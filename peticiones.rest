@@ -20,7 +20,7 @@ Content-Type:application/json
 
 GET http://localhost:3000/api/posts
 ###
-GET http://localhost:3000/api/posts/5
+GET http://localhost:3000/api/posts/1
 ###
 POST http://localhost:3000/api/posts
 Content-Type:application/json

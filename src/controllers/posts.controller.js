@@ -11,65 +11,11 @@ const getAllPosts = async (req, res) => {
     }
 }
 
-// const getAllPostsByAutor = async (req, res) => {
-//     try {
-//         const { IdAutor } = req.params;
-//         const [result] = await PostModel.selectPostsByAutorId(IdAutor);
-//         const elements = [];
-
-//         result.forEach((post) => {
-//             const element = elements.find((autor) => autor.autor.Id === post.IdAutor);
-
-//             if (element) {
-//                 // Si el autor ya existe en el array
-//                 const postData = {
-//                     Id: post.Id,
-//                     Titulo: post.Titulo,
-//                     Descripcion: post.Descripcion,
-//                     FechaCreacion: post.FechaCreacion,
-//                     Categoria: post.Categoria,
-//                 };
-
-//                 // Agregar el post al array de posts del autor
-//                 element.posts.push(postData);
-//             } else {
-//                 // Si el autor no existe en el array
-//                 const postData = {
-//                     Id: post.Id,
-//                     Titulo: post.Titulo,
-//                     Descripcion: post.Descripcion,
-//                     FechaCreacion: post.FechaCreacion,
-//                     Categoria: post.Categoria,
-//                 };
-
-//                 const data = {
-//                     autor: {
-//                         Id: post.IdAutor,
-//                         Nombre: post.NombreAutor,
-//                         Email: post.EmailAutor,
-//                         Imagen: post.ImagenAutor,
-//                     },
-//                     posts: [postData], // Crear un nuevo array de posts para el autor
-//                 };
-
-//                 elements.push(data);
-//             }
-//         });
-
-//         res.json(elements);
-//     } catch (error) {
-//         res.json({ error: error.message });
-//     }
-// };
-
-// module.exports = {
-//     getAllPostsByAutor,
-// };
 
 const getAllPostsByAutor = async (req, res) => {
     try {
         const { IdAutor } = req.params;
-        const [result] = await PostModel.selectPostsByAutorId(IdAutor);
+        const [result] = await PostModel.selectPostsByAutor(IdAutor);
         const elements = [];
 
         if (!result || result.length === 0) {
