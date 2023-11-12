@@ -16,8 +16,8 @@
 
 # AYUDA CREACIÓN DEL .ENV
 
-DB_HOST="127.0.0.1"
-DB_USER="nombre_MySQL_User"
-DB_PASSWORD="password"
-DB_PORT= numero_puerto 
+DB_HOST="127.0.0.1"  
+DB_USER="nombre_MySQL_User"  
+DB_PASSWORD="password"  
+DB_PORT= numero_puerto  
 DB_NAME="db_name" 
